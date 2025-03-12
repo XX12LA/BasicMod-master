@@ -15,6 +15,14 @@
   },
   "${modID}:Defend": {
     "NAME": "防禦",
-    "DESCRIPTION": "獲得 !B! 點格擋"
+    "DESCRIPTION": "獲得 !B! 點 格擋 "
+  },
+  "${modID}:ChargedSlash": {
+    "NAME": "蓄力揮刀",
+    "DESCRIPTION": "造成 !D! 點傷害 NL 獲得1張 *擦刀 NL 消耗"
+  },
+  "${modID}:BladeSwipe": {
+    "NAME": "擦刀",
+    "DESCRIPTION": "獲得1張 *蓄力揮刀 NL 消耗 "
   }
 }

@@ -21,6 +21,7 @@ import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.relics.BurningBlood;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import dbdmod.cards.attack.Strike;
+import dbdmod.cards.attack.ChargedSlash;
 import dbdmod.cards.skill.Defend;
 
 import java.util.ArrayList;
@@ -145,6 +146,7 @@ public class MyCharacter extends CustomPlayer {
         for (int i = 0; i < 4; i++) {
             retVal.add(Defend.ID);
         }
+        retVal.add(ChargedSlash.ID);
 
         return retVal;
     }
