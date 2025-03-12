@@ -23,6 +23,6 @@
   },
   "${modID}:BladeSwipe": {
     "NAME": "擦刀",
-    "DESCRIPTION": "獲得1張 *蓄力揮刀 NL 消耗 "
+    "DESCRIPTION": " 保留 NL 獲得1張 *蓄力揮刀 NL 力量 [#FF0000]1 :回復 [E] NL 消耗 "
   }
 }

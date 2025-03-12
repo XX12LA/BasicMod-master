@@ -5,5 +5,13 @@
     "DESCRIPTIONS": [
       "Gain [E] at the start of your turn. [E] is an energy icon."
     ]
+  },
+  "${modID}:BloodLust": {
+    "NAME": "殺戮慾望",
+    "FLAVOR": "你無法逃脫我的手掌心",
+    "DESCRIPTIONS": [
+      "每回合開始時，獲得 #b",
+      "點 #y力量"
+    ]
   }
 }

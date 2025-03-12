@@ -1,10 +1,15 @@
 package dbdmod.cards.skill;
 
 import basemod.patches.com.megacrit.cardcrawl.screens.compendium.CardLibraryScreen.NoCompendium;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import dbdmod.cards.BaseCard;
 import dbdmod.cards.attack.ChargedSlash;
 import dbdmod.character.MyCharacter;
@@ -25,22 +30,23 @@ public class BladeSwipe extends BaseCard {
         super(ID, info); //Pass the required information to the BaseCard constructor.
 
         this.exhaust = true;
+        this.selfRetain = true;
+        setCostUpgrade(0);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new MakeTempCardInHandAction(new ChargedSlash(), 1));
-    }
-
-    @Override
-    public void upgrade() {
-        if (!this.upgraded) {
-            this.upgradeName();
-            this.upgradeBaseCost(0);
+        AbstractPower power = p.getPower(StrengthPower.POWER_ID);
+        int strengthAmount = 0;
+        if (power != null) {
+            strengthAmount = power.amount;
         }
-
+        if (strengthAmount >= 1) {
+            addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, -1)));
+            addToBot(new GainEnergyAction(1));
+        }
     }
-
 
     @Override
     public AbstractCard makeCopy() { //Optional
