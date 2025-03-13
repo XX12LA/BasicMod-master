@@ -36,7 +36,11 @@ public class BladeSwipe extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new MakeTempCardInHandAction(new ChargedSlash(), 1));
+        ChargedSlash card = new ChargedSlash();
+        if (this.upgraded) {
+            card.upgrade();
+        }
+        addToBot(new MakeTempCardInHandAction(card, 1));
         AbstractPower power = p.getPower(StrengthPower.POWER_ID);
         int strengthAmount = 0;
         if (power != null) {

@@ -19,10 +19,12 @@
   },
   "${modID}:ChargedSlash": {
     "NAME": "蓄力揮刀",
-    "DESCRIPTION": "造成 !D! 點傷害 NL 獲得1張 *擦刀 NL 消耗"
+    "DESCRIPTION": "造成 !D! 點傷害 NL 獲得1張 *擦刀 NL 消耗",
+    "UPGRADE_DESCRIPTION": "造成 !D! 點傷害 NL 獲得1張 *擦刀+ NL 消耗"
   },
   "${modID}:BladeSwipe": {
     "NAME": "擦刀",
-    "DESCRIPTION": " 保留 NL 獲得1張 *蓄力揮刀 NL 力量 [#FF0000]1 :回復 [E] NL 消耗 "
+    "DESCRIPTION": " 保留 NL 獲得1張 *蓄力揮刀 NL ${modID}:滅殺 (1): 回復 [E] NL 消耗 ",
+    "UPGRADE_DESCRIPTION": " 保留 NL 獲得1張 *蓄力揮刀+ NL ${modID}:滅殺 (1): 回復 [E] NL 消耗 "
   }
 }

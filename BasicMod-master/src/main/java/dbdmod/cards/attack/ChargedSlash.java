@@ -36,7 +36,21 @@ public class ChargedSlash extends BaseCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_HEAVY));
-        addToBot(new MakeTempCardInHandAction(new BladeSwipe(), 1));
+        BladeSwipe card = new BladeSwipe();
+        if (this.upgraded) {
+            card.upgrade();
+        }
+        addToBot(new MakeTempCardInHandAction(card, 1));
+    }
+
+    @Override
+    public void upgrade() {
+        if (!this.upgraded) {
+            this.upgradeName();
+            BladeSwipe card = new BladeSwipe();
+            card.upgrade();
+            this.cardsToPreview = card;
+        }
     }
 
     @Override

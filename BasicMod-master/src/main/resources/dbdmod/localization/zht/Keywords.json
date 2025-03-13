@@ -19,5 +19,19 @@
       "multiword_keywords"
     ],
     "DESCRIPTION": "Make sure the first element in NAMES has no underscores. The rest should use _ in the place of spaces. In card text, you'll use the underscore versions."
+  },
+  {
+    "PROPER_NAME": "殘暴",
+    "NAMES": [
+      "殘暴"
+    ],
+    "DESCRIPTION": "可抵消 #y滅殺 所支付的 #y力量"
+  },
+  {
+    "PROPER_NAME": "滅殺",
+    "NAMES": [
+        "滅殺"
+    ],
+    "DESCRIPTION": "支付指定點數的 #y力量 並觸發效果 NL 會優先使用 #y殘暴"
   }
 ]
