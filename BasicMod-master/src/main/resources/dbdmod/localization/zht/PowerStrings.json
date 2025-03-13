@@ -4,5 +4,12 @@
     "DESCRIPTIONS": [
       "You are Very Cool and Strong."
     ]
+  },
+  "${modID}:Brutal": {
+    "NAME": "殘暴",
+    "DESCRIPTIONS": [
+      "可抵消 #y滅殺 所支付的 #b",
+      " 點 #y力量"
+    ]
   }
 }

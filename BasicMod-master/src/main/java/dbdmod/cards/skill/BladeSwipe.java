@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 import dbdmod.cards.BaseCard;
 import dbdmod.cards.attack.ChargedSlash;
 import dbdmod.character.MyCharacter;
+import dbdmod.powers.Brutal;
 import dbdmod.util.CardStats;
 
 @NoCompendium
@@ -41,11 +42,27 @@ public class BladeSwipe extends BaseCard {
             card.upgrade();
         }
         addToBot(new MakeTempCardInHandAction(card, 1));
-        AbstractPower power = p.getPower(StrengthPower.POWER_ID);
-        int strengthAmount = 0;
-        if (power != null) {
-            strengthAmount = power.amount;
+
+        // Detect Brutal stacks
+        AbstractPower brutal = p.getPower(Brutal.POWER_ID);
+        int brutalAmount = 0;
+        if (brutal != null) {
+            brutalAmount = brutal.amount;
         }
+        // If Brutal enough
+        if (brutalAmount >= 1) {
+            addToBot(new ApplyPowerAction(p, p, new Brutal(p, -1)));
+            addToBot(new GainEnergyAction(1));
+            return;
+        }
+
+        // Detect strength stacks
+        AbstractPower strength = p.getPower(StrengthPower.POWER_ID);
+        int strengthAmount = 0;
+        if (strength != null) {
+            strengthAmount = strength.amount;
+        }
+
         if (strengthAmount >= 1) {
             addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, -1)));
             addToBot(new GainEnergyAction(1));
