@@ -30,5 +30,9 @@
   "${modID}:BloodBeast": {
     "NAME": "嗜血兇獸",
     "DESCRIPTION": "獲得 !M! 點 ${modID}:殘暴 NL 消耗"
+  },
+  "${modID}:HitHand": {
+    "NAME": "富蘭克林之死",
+    "DESCRIPTION": "造成 !D! 點傷害 NL ${modID}:滅殺 ( !M! ): 抽3張牌"
   }
 }

@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import dbdmod.MyFunction;
 import dbdmod.cards.BaseCard;
 import dbdmod.cards.attack.ChargedSlash;
 import dbdmod.character.MyCharacter;
@@ -43,29 +44,22 @@ public class BladeSwipe extends BaseCard {
         }
         addToBot(new MakeTempCardInHandAction(card, 1));
 
-        // Detect Brutal stacks
-        AbstractPower brutal = p.getPower(Brutal.POWER_ID);
-        int brutalAmount = 0;
-        if (brutal != null) {
-            brutalAmount = brutal.amount;
-        }
-        // If Brutal enough
-        if (brutalAmount >= 1) {
-            addToBot(new ApplyPowerAction(p, p, new Brutal(p, -1)));
-            addToBot(new GainEnergyAction(1));
+        int[] result = MyFunction.annihilate(p, 1);
+        int brutalToReduce = result[0];
+        int strengthToReduce = result[1];
+
+        // No trigger
+        if (brutalToReduce == 0 && strengthToReduce == 0) {
             return;
         }
 
-        // Detect strength stacks
-        AbstractPower strength = p.getPower(StrengthPower.POWER_ID);
-        int strengthAmount = 0;
-        if (strength != null) {
-            strengthAmount = strength.amount;
+        // Trigger
+        addToBot(new GainEnergyAction(1));
+        if (brutalToReduce != 0) {
+            addToBot(new ApplyPowerAction(p, p, new Brutal(p, brutalToReduce)));
         }
-
-        if (strengthAmount >= 1) {
-            addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, -1)));
-            addToBot(new GainEnergyAction(1));
+        if (strengthToReduce != 0) {
+            addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, strengthToReduce)));
         }
     }
 
