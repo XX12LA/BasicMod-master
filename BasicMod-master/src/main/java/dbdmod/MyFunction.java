@@ -28,6 +28,7 @@ public class MyFunction {
         if (totalPower >= needed) {
             result[0] = -brutalAmount;
             result[1] = brutalAmount-needed;
+            return result;
         }
 
         // If Strength stacks are enough

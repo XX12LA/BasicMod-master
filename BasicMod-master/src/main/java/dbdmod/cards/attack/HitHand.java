@@ -34,6 +34,7 @@ public class HitHand extends BaseCard {
         setMagic(2, -1);
     }
 
+    @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
 
@@ -47,7 +48,7 @@ public class HitHand extends BaseCard {
         }
 
         // Trigger
-        addToBot((new DrawCardAction(p, 3)));
+        addToBot((new DrawCardAction(p, 4)));
         if (brutalToReduce != 0) {
             addToBot(new ApplyPowerAction(p, p, new Brutal(p, brutalToReduce)));
         }

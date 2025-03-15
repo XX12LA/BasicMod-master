@@ -33,6 +33,10 @@
   },
   "${modID}:HitHand": {
     "NAME": "富蘭克林之死",
-    "DESCRIPTION": "造成 !D! 點傷害 NL ${modID}:滅殺 ( !M! ): 抽3張牌"
+    "DESCRIPTION": "造成 !D! 點傷害 NL ${modID}:滅殺 ( !M! ): 抽4張牌"
+  },
+  "${modID}:Enduring": {
+    "NAME": "耐力持久",
+    "DESCRIPTION": "下一回合受到的傷害-50% NL 受攻擊時將1張 *暈眩 放入抽牌堆"
   }
 }
