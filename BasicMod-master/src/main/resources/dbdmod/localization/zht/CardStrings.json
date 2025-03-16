@@ -37,6 +37,11 @@
   },
   "${modID}:Enduring": {
     "NAME": "耐力持久",
-    "DESCRIPTION": "下一回合受到的傷害-50% NL 受攻擊時將1張 *暈眩 放入抽牌堆"
+    "DESCRIPTION": "下一回合受到的生命值傷害-50% NL 觸發時將1張 *暈眩 放入抽牌堆"
+  },
+  "${modID}:Unrelenting": {
+    "NAME": "不屈不撓",
+    "DESCRIPTION": "造成 !D! 點傷害 NL 未造成生命值傷害時回復 [E]",
+    "UPGRADE_DESCRIPTION":"造成 !D! 點傷害 NL 未造成生命值傷害時 NL 回復 [E] [E]"
   }
 }

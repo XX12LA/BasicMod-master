@@ -15,7 +15,7 @@
   "${modID}:EnduringPower": {
     "NAME": "耐力持久",
     "DESCRIPTIONS": [
-      "受到的傷害- #b50% NL 受攻擊時將1張 #y暈眩 放入抽牌堆 NL 持續 #b",
+      "受到的生命值傷害- #b50% NL 受攻擊時將1張 #y暈眩 放入抽牌堆 NL 持續 #b",
       " 回合"
     ]
   }

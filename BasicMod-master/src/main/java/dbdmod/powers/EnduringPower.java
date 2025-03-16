@@ -13,7 +13,7 @@ import static dbdmod.BasicMod.makeID;
 public class EnduringPower extends BasePower {
     public static final String POWER_ID = makeID("EnduringPower");
     private static final AbstractPower.PowerType TYPE = AbstractPower.PowerType.BUFF;
-    private static final boolean TURN_BASED = false;
+    private static final boolean TURN_BASED = true;
 
     public EnduringPower(AbstractCreature owner, int amount) {
         super(POWER_ID, TYPE, TURN_BASED, owner, amount);
@@ -48,7 +48,7 @@ public class EnduringPower extends BasePower {
         return (int) Math.ceil(damageAmount * 0.5);
     }
 
-    public void atEndOfRound() {
+    public void atStartOfTurnPostDraw() {
         addToBot(new ReducePowerAction(this.owner, this.owner, this, 1));
     }
 }
