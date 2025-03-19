@@ -2,6 +2,7 @@ package dbdmod.relics;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.powers.BrutalityPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import dbdmod.character.MyCharacter;
 import javafx.application.Application;
@@ -26,6 +27,6 @@ public class BloodLust extends BaseRelic {
 
     @Override
     public void atTurnStartPostDraw() {
-        addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, 1)));
+        addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new BrutalityPower(AbstractDungeon.player, 1)));
     }
 }

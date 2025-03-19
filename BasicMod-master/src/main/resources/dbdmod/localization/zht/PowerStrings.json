@@ -5,18 +5,27 @@
       "You are Very Cool and Strong."
     ]
   },
-  "${modID}:Brutal": {
-    "NAME": "殘暴",
-    "DESCRIPTIONS": [
-      "可抵消 #y滅殺 所支付的 #b",
-      " 點 #y力量"
-    ]
-  },
   "${modID}:EnduringPower": {
     "NAME": "耐力持久",
     "DESCRIPTIONS": [
       "受到的生命值傷害- #b50% NL 受攻擊時將1張 #y暈眩 放入抽牌堆 NL 持續 #b",
       " 回合"
+    ]
+  },
+  "${modID}:BloodEchoPower": {
+    "NAME": "鮮血迴響",
+    "DESCRIPTIONS": [
+      "死亡後 使所有敵人失去 #b",
+      " 點力量 NL ",
+      "給予所有敵人 #b",
+      " 層虛弱"
+    ]
+  },
+  "${modID}:GeneticLimitsPower": {
+    "NAME": "基因限制",
+    "DESCRIPTIONS": [
+      "自殘時回復 #b",
+      " 點生命"
     ]
   }
 }

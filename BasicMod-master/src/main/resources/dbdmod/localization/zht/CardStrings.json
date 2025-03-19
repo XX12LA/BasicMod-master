@@ -41,7 +41,19 @@
   },
   "${modID}:Unrelenting": {
     "NAME": "不屈不撓",
-    "DESCRIPTION": "造成 !D! 點傷害 NL 未造成生命值傷害時回復 [E]",
+    "DESCRIPTION": "造成 !D! 點傷害 NL 未造成生命值傷害時 NL 回復 [E]",
     "UPGRADE_DESCRIPTION":"造成 !D! 點傷害 NL 未造成生命值傷害時 NL 回復 [E] [E]"
+  },
+  "${modID}:BloodFavour": {
+    "NAME": "厄咒:鮮血恩惠",
+    "DESCRIPTION": "失去8點生命 NL 獲得 !B! 點 格擋 "
+  },
+  "${modID}:BloodEcho": {
+    "NAME": "鮮血迴響",
+    "DESCRIPTION": "這名敵人死亡時 NL 使所有敵人失去 !M! 點 力量 NL 給予所有敵人 !M! 層 虛弱 "
+  },
+  "${modID}:GeneticLimits": {
+    "NAME": "基因限制",
+    "DESCRIPTION": "自殘時回復 !M! 點生命"
   }
 }

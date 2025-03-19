@@ -2,19 +2,17 @@ package dbdmod.cards.skill;
 
 import basemod.patches.com.megacrit.cardcrawl.screens.compendium.CardLibraryScreen.NoCompendium;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.BrutalityPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
-import dbdmod.MyFunction;
 import dbdmod.cards.BaseCard;
 import dbdmod.cards.attack.ChargedSlash;
 import dbdmod.character.MyCharacter;
-import dbdmod.powers.Brutal;
 import dbdmod.util.CardStats;
 
 @NoCompendium
@@ -44,27 +42,10 @@ public class BladeSwipe extends BaseCard {
         }
         addToBot(new MakeTempCardInHandAction(card, 1));
 
-        int[] result = MyFunction.annihilate(p, 1);
-        int brutalToReduce = result[0];
-        int strengthToReduce = result[1];
-
-        // No trigger
-        if (brutalToReduce == 0 && strengthToReduce == 0) {
-            return;
+        int brutalAmount = p.getPower(BrutalityPower.POWER_ID).amount;
+        if (brutalAmount >= 1) {
+            addToBot(new ApplyPowerAction(p, p, new BrutalityPower(p, -1)));
+            addToBot(new GainEnergyAction(1));
         }
-
-        // Trigger
-        addToBot(new GainEnergyAction(1));
-        if (brutalToReduce != 0) {
-            addToBot(new ApplyPowerAction(p, p, new Brutal(p, brutalToReduce)));
-        }
-        if (strengthToReduce != 0) {
-            addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, strengthToReduce)));
-        }
-    }
-
-    @Override
-    public AbstractCard makeCopy() { //Optional
-        return new BladeSwipe();
     }
 }

@@ -1,13 +1,12 @@
 package dbdmod.cards.skill;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.BrutalityPower;
 import dbdmod.cards.BaseCard;
 import dbdmod.character.MyCharacter;
-import dbdmod.powers.Brutal;
 import dbdmod.util.CardStats;
 
 public class BloodBeast extends BaseCard {
@@ -17,7 +16,7 @@ public class BloodBeast extends BaseCard {
             CardType.SKILL,
             CardRarity.COMMON,
             CardTarget.SELF,
-            0
+            1
     );
 
     public BloodBeast() {
@@ -29,7 +28,7 @@ public class BloodBeast extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p, p, new Brutal(p, this.magicNumber)));
+        addToBot(new ApplyPowerAction(p, p, new BrutalityPower(p, this.magicNumber)));
     }
 
     @Override
