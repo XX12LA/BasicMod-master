@@ -45,12 +45,8 @@ public class ChargedSlash extends BaseCard {
 
     @Override
     public void upgrade() {
-        if (!this.upgraded) {
-            BladeSwipe card = new BladeSwipe();
-            card.upgrade();
-            this.cardsToPreview = card;
-            upgradeName();
-        }
+        super.upgrade();
+        cardsToPreview.upgrade();
     }
 
     @Override

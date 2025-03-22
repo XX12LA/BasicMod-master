@@ -31,7 +31,7 @@ public class GeneticLimitsPower extends BasePower {
 
     @Override
     public void wasHPLost(DamageInfo info, int damageAmount) {
-        if (damageAmount > 0 && info.owner == this.owner) {
+        if (info.owner == this.owner) {
             flash();
             addToBot(new HealAction(owner, source, amount));
         }

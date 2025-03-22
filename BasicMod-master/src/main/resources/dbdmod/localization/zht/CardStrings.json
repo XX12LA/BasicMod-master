@@ -37,7 +37,7 @@
   },
   "${modID}:Enduring": {
     "NAME": "耐力持久",
-    "DESCRIPTION": "下一回合受到的生命值傷害-50% NL 觸發時將1張 *暈眩 放入抽牌堆"
+    "DESCRIPTION": "受到的生命值傷害-50%，觸發時將1張 *暈眩 放入抽牌堆 NL 回合開始時移除1層"
   },
   "${modID}:Unrelenting": {
     "NAME": "不屈不撓",
@@ -50,10 +50,23 @@
   },
   "${modID}:BloodEcho": {
     "NAME": "鮮血迴響",
-    "DESCRIPTION": "這名敵人死亡時 NL 使所有敵人失去 !M! 點 力量 NL 給予所有敵人 !M! 層 虛弱 "
+    "DESCRIPTION": "這名敵人死亡時，使所有敵人失去 !M! 點 力量 ，給予所有敵人 !M! 層 虛弱 "
   },
   "${modID}:GeneticLimits": {
     "NAME": "基因限制",
-    "DESCRIPTION": "自殘時回復 !M! 點生命"
+    "DESCRIPTION": "對自己造成生命值傷害時 NL 回復2點生命",
+    "UPGRADE_DESCRIPTION":" 固有 NL 對自己造成生命值傷害時 NL 回復2點生命"
+  },
+  "${modID}:YamaokasWrath": {
+    "NAME": "山崗之怒",
+    "DESCRIPTION": "對自己造成的生命值傷害達 !M! 點時，進入 憤怒 NL 回合結束時移除本能力並退出 憤怒 "
+  },
+  "${modID}:FastKick": {
+    "NAME": "所向無敵",
+    "DESCRIPTION": "移除一名敵人所有的格擋值 NL 給予 !M! 層易傷"
+  },
+  "${modID}:Undying": {
+    "NAME": "厄咒:不死",
+    "DESCRIPTION": "下一張打出的厄咒牌會額外打出一次"
   }
 }

@@ -27,5 +27,19 @@
       "自殘時回復 #b",
       " 點生命"
     ]
+  },
+  "${modID}:YamaokasWrathPower": {
+    "NAME": "山崗之怒",
+    "DESCRIPTIONS": [
+      "對自己造成的生命值傷害達 #b",
+      " 點時，進入憤怒 NL 回合結束時移除本能力並退出 #y憤怒 "
+    ]
+  },
+  "${modID}:UndyingPower": {
+    "NAME": "厄咒:不死",
+    "DESCRIPTIONS": [
+      "下 #b",
+      " 張打出的厄咒牌會額外打出一次"
+    ]
   }
 }
