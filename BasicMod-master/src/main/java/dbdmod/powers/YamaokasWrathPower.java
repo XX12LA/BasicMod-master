@@ -35,8 +35,12 @@ public class YamaokasWrathPower extends BasePower {
 
     @Override
     public void atEndOfTurnPreEndTurnCards(boolean isPlayer) {
-        addToBot(new ChangeStanceAction(NeutralStance.STANCE_ID));
-        addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
+        if (amount == 0) {
+            if (AbstractDungeon.player.stance.ID.equals(WrathStance.STANCE_ID)) {
+                addToBot(new ChangeStanceAction(NeutralStance.STANCE_ID));
+            }
+            addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
+        }
     }
 
     public void updateDescription() {

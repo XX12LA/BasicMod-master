@@ -25,7 +25,7 @@
     "NAMES": [
         "滅殺"
     ],
-    "DESCRIPTION": "消耗指定層數的 #y殘暴 並觸發效果"
+    "DESCRIPTION": "消耗X層 #y殘暴 並觸發效果"
   },
   {
     "PROPER_NAME": "殘暴",
@@ -33,5 +33,33 @@
       "殘暴"
     ],
     "DESCRIPTION": "在你的回合開始時，失去 #b1 生命 並抽 #b1 張牌"
+  },
+  {
+    "PROPER_NAME": "危險",
+    "NAMES": [
+      "危險"
+    ],
+    "DESCRIPTION": "下一次會受到雙倍傷害"
+  },
+  {
+    "PROPER_NAME": "根植",
+    "NAMES": [
+      "根植"
+    ],
+    "DESCRIPTION": "這張牌的效果必須要在手牌上才能觸發"
+  },
+  {
+    "PROPER_NAME": "枯萎腐敗",
+    "NAMES": [
+      "枯萎腐敗"
+    ],
+    "DESCRIPTION": "擁有五層以上時死亡，回合結束時清空"
+  },
+  {
+    "PROPER_NAME": "氣場",
+    "NAMES": [
+      "氣場"
+    ],
+    "DESCRIPTION": "查看抽牌堆頂部的X張牌，選擇特定張數的卡放到手中 NL 此效果不視為抽牌"
   }
 ]

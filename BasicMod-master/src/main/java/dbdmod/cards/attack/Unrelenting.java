@@ -22,7 +22,7 @@ public class Unrelenting extends BaseCard {
 
     public Unrelenting() {
         super(ID, info);
-        setDamage(2);
+        setDamage(3);
         setMagic(1, 1);
     }
 

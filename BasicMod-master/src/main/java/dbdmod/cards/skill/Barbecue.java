@@ -1,31 +1,31 @@
-package dbdmod.cards.power;
+package dbdmod.cards.skill;
 
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import dbdmod.AuraAction;
 import dbdmod.cards.BaseCard;
 import dbdmod.character.MyCharacter;
-import dbdmod.powers.YamaokasWrathPower;
 import dbdmod.util.CardStats;
 
-public class YamaokasWrath extends BaseCard {
-    public static final String ID = makeID(YamaokasWrath.class.getSimpleName());
+public class Barbecue extends BaseCard {
+    public static final String ID = makeID(Barbecue.class.getSimpleName());
     private static final CardStats info = new CardStats(
             MyCharacter.Meta.CARD_COLOR, //The card color. If you're making your own character, it'll look something like this. Otherwise, it'll be CardColor.RED or similar for a basegame character color.
-            CardType.POWER, //The type. ATTACK/SKILL/POWER/CURSE/STATUS
+            CardType.SKILL, //The type. ATTACK/SKILL/POWER/CURSE/STATUS
             CardRarity.UNCOMMON, //Rarity. BASIC is for starting cards, then there's COMMON/UNCOMMON/RARE, and then SPECIAL and CURSE. SPECIAL is for cards you only get from events. Curse is for curses, except for special curses like Curse of the Bell and Necronomicurse.
             CardTarget.SELF, //The target. Single target is ENEMY, all enemies is ALL_ENEMY. Look at cards similar to what you want to see what to use.
-            1 //The card's base cost. -1 is X cost, -2 is no cost for unplayable cards like curses, or Reflex.
+            0 //The card's base cost. -1 is X cost, -2 is no cost for unplayable cards like curses, or Reflex.
     );
 
-    public YamaokasWrath() {
+    public Barbecue() {
         super(ID, info);
 
-        setMagic(24, -4);
+        setMagic(4, 1);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p, p, new YamaokasWrathPower(p, magicNumber)));
+        addToBot(new AuraAction(magicNumber, 1));
     }
 }

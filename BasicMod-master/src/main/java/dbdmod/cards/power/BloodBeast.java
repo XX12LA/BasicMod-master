@@ -1,4 +1,4 @@
-package dbdmod.cards.skill;
+package dbdmod.cards.power;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -13,8 +13,8 @@ public class BloodBeast extends BaseCard {
     public static final String ID = makeID(BloodBeast.class.getSimpleName());
     private static final CardStats info = new CardStats(
             MyCharacter.Meta.CARD_COLOR,
-            CardType.SKILL,
-            CardRarity.COMMON,
+            CardType.POWER,
+            CardRarity.UNCOMMON,
             CardTarget.SELF,
             1
     );
@@ -22,17 +22,11 @@ public class BloodBeast extends BaseCard {
     public BloodBeast() {
         super(ID, info);
 
-        setMagic(2, 1);
-        setExhaust(true);
+        setMagic(1, 1);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new ApplyPowerAction(p, p, new BrutalityPower(p, this.magicNumber)));
-    }
-
-    @Override
-    public AbstractCard makeCopy() { //Optional
-        return new BloodBeast();
     }
 }

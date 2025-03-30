@@ -29,7 +29,7 @@
   },
   "${modID}:BloodBeast": {
     "NAME": "嗜血兇獸",
-    "DESCRIPTION": "獲得 !M! 點 ${modID}:殘暴 NL 消耗"
+    "DESCRIPTION": "獲得 !M! 點 ${modID}:殘暴 "
   },
   "${modID}:HitHand": {
     "NAME": "富蘭克林之死",
@@ -54,12 +54,12 @@
   },
   "${modID}:GeneticLimits": {
     "NAME": "基因限制",
-    "DESCRIPTION": "對自己造成生命值傷害時 NL 回復2點生命",
-    "UPGRADE_DESCRIPTION":" 固有 NL 對自己造成生命值傷害時 NL 回復2點生命"
+    "DESCRIPTION": "對自己造成生命值傷害時，回復2點生命",
+    "UPGRADE_DESCRIPTION":" 固有 NL 對自己造成生命值傷害時，回復2點生命"
   },
   "${modID}:YamaokasWrath": {
     "NAME": "山崗之怒",
-    "DESCRIPTION": "對自己造成的生命值傷害達 !M! 點時，進入 憤怒 NL 回合結束時移除本能力並退出 憤怒 "
+    "DESCRIPTION": "對自己造成的生命值傷害達 !M! 點時，進入 憤怒 NL 憤怒 :回合結束時移除本能力並退出 憤怒 "
   },
   "${modID}:FastKick": {
     "NAME": "所向無敵",
@@ -68,5 +68,26 @@
   "${modID}:Undying": {
     "NAME": "厄咒:不死",
     "DESCRIPTION": "下一張打出的厄咒牌會額外打出一次"
+  },
+  "${modID}:HauntedGround": {
+    "NAME": "厄咒:鬧鬼之地",
+    "DESCRIPTION": " 無法打出 、 ${modID}:根植 NL 本回合每受傷一次耗能-1，耗能為0時給予全部敵人 !M! 層 ${modID}:危險 "
+  },
+  "${modID}:Corruption": {
+    "NAME": "枯萎腐敗",
+    "DESCRIPTION": "獲得一層 ${modID}:枯萎腐敗 NL 獲得5層 中毒 NL 回復 [E] [E] [E] NL 抽 !M! 張牌"
+  },
+  "${modID}:Barbecue": {
+    "NAME": "人肉燒烤",
+    "DESCRIPTION": " ${modID}:氣場 ( !M! ):選1張牌"
+  },
+  "${modID}:DreamDemon": {
+    "NAME": "夢魘",
+    "DESCRIPTION": "本回合對自己造成生命值傷害時，回復等量的生命 NL 本回合無法再抽牌 NL 虛無 ",
+    "UPGRADE_DESCRIPTION":"本回合對自己造成生命值傷害時，回復等量的生命 NL 本回合無法再抽牌"
+  },
+  "${modID}:BubbasChainsaw": {
+    "NAME": "布巴的電鋸",
+    "DESCRIPTION": "造成 !D! 點傷害X次，捨棄所有手牌 NL 每捨棄一張牌，傷害次數+1"
   }
 }
