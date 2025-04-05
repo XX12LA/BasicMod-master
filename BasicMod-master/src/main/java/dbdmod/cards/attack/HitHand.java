@@ -26,7 +26,7 @@ public class HitHand extends BaseCard {
         super(ID, info); //Pass the required information to the BaseCard constructor.
 
         setDamage(6); //Sets the card's damage and how much it changes when upgraded.
-        setMagic(2, -1);
+        setMagic(3, 1);
     }
 
     @Override
@@ -34,9 +34,9 @@ public class HitHand extends BaseCard {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
 
         int brutalAmount = p.getPower(BrutalityPower.POWER_ID).amount;
-        if (brutalAmount >= magicNumber) {
-            addToBot(new ApplyPowerAction(p, p, new BrutalityPower(p, -magicNumber)));
-            addToBot((new DrawCardAction(p, 4)));
+        if (brutalAmount >= 1) {
+            addToBot(new ApplyPowerAction(p, p, new BrutalityPower(p, -1)));
+            addToBot((new DrawCardAction(p, magicNumber)));
         }
     }
 }

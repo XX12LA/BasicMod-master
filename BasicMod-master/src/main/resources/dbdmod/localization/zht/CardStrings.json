@@ -29,11 +29,11 @@
   },
   "${modID}:BloodBeast": {
     "NAME": "嗜血兇獸",
-    "DESCRIPTION": "獲得 !M! 點 ${modID}:殘暴 "
+    "DESCRIPTION": "獲得1點 ${modID}:殘暴 "
   },
   "${modID}:HitHand": {
     "NAME": "富蘭克林之死",
-    "DESCRIPTION": "造成 !D! 點傷害 NL ${modID}:滅殺 ( !M! ): 抽4張牌"
+    "DESCRIPTION": "造成 !D! 點傷害 NL ${modID}:滅殺 (1): 抽 !M! 張牌"
   },
   "${modID}:Enduring": {
     "NAME": "耐力持久",
@@ -73,9 +73,9 @@
     "NAME": "厄咒:鬧鬼之地",
     "DESCRIPTION": " 無法打出 、 ${modID}:根植 NL 本回合每受傷一次耗能-1，耗能為0時給予全部敵人 !M! 層 ${modID}:危險 "
   },
-  "${modID}:Corruption": {
+  "${modID}:BlightedCorruption": {
     "NAME": "枯萎腐敗",
-    "DESCRIPTION": "獲得一層 ${modID}:枯萎腐敗 NL 獲得5層 中毒 NL 回復 [E] [E] [E] NL 抽 !M! 張牌"
+    "DESCRIPTION": "獲得一層 ${modID}:枯萎腐敗 NL 獲得8層 中毒 NL 回復 [E] [E] [E] NL 抽 !M! 張牌"
   },
   "${modID}:Barbecue": {
     "NAME": "人肉燒烤",
@@ -83,11 +83,23 @@
   },
   "${modID}:DreamDemon": {
     "NAME": "夢魘",
-    "DESCRIPTION": "本回合對自己造成生命值傷害時，回復等量的生命 NL 本回合無法再抽牌 NL 虛無 ",
-    "UPGRADE_DESCRIPTION":"本回合對自己造成生命值傷害時，回復等量的生命 NL 本回合無法再抽牌"
+    "DESCRIPTION": "本回合無法再抽牌 NL 本回合對自己造成生命值傷害時，回復等量的生命 NL 虛無 ",
+    "UPGRADE_DESCRIPTION":"本回合無法再抽牌 NL 本回合對自己造成生命值傷害時，回復等量的生命"
   },
   "${modID}:BubbasChainsaw": {
     "NAME": "布巴的電鋸",
-    "DESCRIPTION": "造成 !D! 點傷害X次，捨棄所有手牌 NL 每捨棄一張牌，傷害次數+1"
+    "DESCRIPTION": "對隨機敵人造成 !D! 點傷害1次，捨棄所有手牌 NL 每捨棄一張牌，傷害次數+1"
+  },
+  "${modID}:Chainsaw": {
+    "NAME": "染血電鋸",
+    "DESCRIPTION": "造成 !D! 點傷害 NL 當下每損失18%生命值，傷害X2",
+    "EXTENDED_DESCRIPTION": [
+      " NL (目前傷害X",
+      ")"
+    ]
+  },
+  "${modID}:Surge": {
+    "NAME": "電能震盪",
+    "DESCRIPTION": "你每棄一張牌，就對所有敵人造成 !M! 點傷害"
   }
 }

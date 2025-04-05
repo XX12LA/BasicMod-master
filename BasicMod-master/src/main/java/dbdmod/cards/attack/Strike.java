@@ -20,13 +20,10 @@ public class Strike extends BaseCard {
             1 //The card's base cost. -1 is X cost, -2 is no cost for unplayable cards like curses, or Reflex.
     );
 
-    private static final int DAMAGE = 6;
-    private static final int UPG_DAMAGE = 3;
-
     public Strike() {
         super(ID, info); //Pass the required information to the BaseCard constructor.
 
-        setDamage(DAMAGE, UPG_DAMAGE); //Sets the card's damage and how much it changes when upgraded.
+        setDamage(6, 3); //Sets the card's damage and how much it changes when upgraded.
 
         tags.add(CardTags.STARTER_STRIKE);
         tags.add(CardTags.STRIKE);

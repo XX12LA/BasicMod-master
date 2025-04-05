@@ -18,20 +18,17 @@ public class Defend extends BaseCard {
             1
     );
 
-    private static final int BLOCK = 5;
-    private static final int UPG_BLOCK = 3;
-
     public Defend() {
         super(ID, info);
 
-        setBlock(BLOCK, UPG_BLOCK);
+        setBlock(5, 3);
 
         tags.add(CardTags.STARTER_DEFEND);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new GainBlockAction(p, p, BLOCK));
+        addToBot(new GainBlockAction(p, p, block));
     }
 
     @Override

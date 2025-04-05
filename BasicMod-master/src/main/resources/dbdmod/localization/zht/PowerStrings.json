@@ -49,10 +49,10 @@
       " 次會受到雙倍傷害"
     ]
   },
-  "${modID}:CorruptionPower": {
+  "${modID}:BlightedCorruptionPower": {
     "NAME": "枯萎腐敗",
     "DESCRIPTIONS": [
-      "擁有五層以上時死亡 NL 已擁有 #b",
+      "擁有三層以上時死亡 NL 已擁有 #b",
       " 層 NL 回合結束時清空"
     ]
   },
@@ -60,6 +60,13 @@
     "NAME": "夢魘",
     "DESCRIPTIONS": [
       "本回合對自己造成生命值傷害時會回復等量的生命"
+    ]
+  },
+  "${modID}:SurgePower": {
+    "NAME": "電能震盪",
+    "DESCRIPTIONS": [
+      "你每棄一張牌，就對所有敵人造成 #b",
+      " 點傷害"
     ]
   }
 }

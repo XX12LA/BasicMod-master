@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import static dbdmod.BasicMod.makeID;
 
 public class BlightedCorruptionPower extends BasePower {
-    public static final String POWER_ID = makeID("CorruptionPower");
+    public static final String POWER_ID = makeID("BlightedCorruptionPower");
     private static final AbstractPower.PowerType TYPE = PowerType.BUFF;
     private static final boolean TURN_BASED = false;
 
@@ -18,7 +18,7 @@ public class BlightedCorruptionPower extends BasePower {
 
     public void stackPower(int stackAmount) {
         this.amount += stackAmount;
-        if (stackAmount >= 5) {
+        if (stackAmount > 3) {
             addToBot(new LoseHPAction(owner, owner, 99999));
             addToBot(new RemoveSpecificPowerAction(owner, owner, this));
         }

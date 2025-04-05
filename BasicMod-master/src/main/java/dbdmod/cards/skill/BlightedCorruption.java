@@ -12,8 +12,8 @@ import dbdmod.character.MyCharacter;
 import dbdmod.powers.BlightedCorruptionPower;
 import dbdmod.util.CardStats;
 
-public class Corruption extends BaseCard {
-    public static final String ID = makeID(Corruption.class.getSimpleName());
+public class BlightedCorruption extends BaseCard {
+    public static final String ID = makeID(BlightedCorruption.class.getSimpleName());
     private static final CardStats info = new CardStats(
             MyCharacter.Meta.CARD_COLOR, //The card color. If you're making your own character, it'll look something like this. Otherwise, it'll be CardColor.RED or similar for a basegame character color.
             CardType.SKILL, //The type. ATTACK/SKILL/POWER/CURSE/STATUS
@@ -22,7 +22,7 @@ public class Corruption extends BaseCard {
             1 //The card's base cost. -1 is X cost, -2 is no cost for unplayable cards like curses, or Reflex.
     );
 
-    public Corruption() {
+    public BlightedCorruption() {
         super(ID, info);
 
         setMagic(3, 1);
@@ -31,7 +31,7 @@ public class Corruption extends BaseCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new ApplyPowerAction(p, p, new BlightedCorruptionPower(p, 1)));
-        addToBot(new ApplyPowerAction(p, p, new PoisonPower(p, p, 5), 5, AbstractGameAction.AttackEffect.POISON));
+        addToBot(new ApplyPowerAction(p, p, new PoisonPower(p, p, 8), 8, AbstractGameAction.AttackEffect.POISON));
         addToBot(new GainEnergyAction(3));
         addToBot(new DrawCardAction(magicNumber));
     }

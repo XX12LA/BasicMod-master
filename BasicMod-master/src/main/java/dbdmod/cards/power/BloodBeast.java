@@ -22,11 +22,11 @@ public class BloodBeast extends BaseCard {
     public BloodBeast() {
         super(ID, info);
 
-        setMagic(1, 1);
+        setCostUpgrade(0);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p, p, new BrutalityPower(p, this.magicNumber)));
+        addToBot(new ApplyPowerAction(p, p, new BrutalityPower(p, 1)));
     }
 }

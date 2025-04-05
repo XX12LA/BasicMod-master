@@ -53,7 +53,7 @@
     "NAMES": [
       "枯萎腐敗"
     ],
-    "DESCRIPTION": "擁有五層以上時死亡，回合結束時清空"
+    "DESCRIPTION": "擁有三層以上時死亡，回合結束時清空"
   },
   {
     "PROPER_NAME": "氣場",
