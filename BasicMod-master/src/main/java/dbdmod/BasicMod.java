@@ -31,6 +31,7 @@ import java.util.*;
 
 @SpireInitializer
 public class BasicMod implements
+        AddAudioSubscriber,
         EditCardsSubscriber,
         EditCharactersSubscriber,
         EditRelicsSubscriber,
@@ -250,5 +251,10 @@ public class BasicMod implements
                     else
                         BaseMod.addRelic(relic, relic.relicType); //Register a shared or base game character specific relic
                 });
+    }
+
+    @Override
+    public void receiveAddAudio() {
+        BaseMod.addAudio(makeID("Exposed"), "dbdmod/sfx/Exposed.ogg");
     }
 }

@@ -1,7 +1,6 @@
 package dbdmod.cards.skill;
 
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.actions.common.LoseHPAction;
+import com.evacipated.cardcrawl.mod.stslib.actions.tempHp.AddTemporaryHPAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import dbdmod.CustomTags;
@@ -9,8 +8,8 @@ import dbdmod.cards.BaseCard;
 import dbdmod.character.MyCharacter;
 import dbdmod.util.CardStats;
 
-public class BloodFavour extends BaseCard {
-    public static final String ID = makeID(BloodFavour.class.getSimpleName());
+public class DevourHope extends BaseCard {
+    public static final String ID = makeID(DevourHope.class.getSimpleName());
     private static final CardStats info = new CardStats(
             MyCharacter.Meta.CARD_COLOR, //The card color. If you're making your own character, it'll look something like this. Otherwise, it'll be CardColor.RED or similar for a basegame character color.
             CardType.SKILL, //The type. ATTACK/SKILL/POWER/CURSE/STATUS
@@ -19,16 +18,16 @@ public class BloodFavour extends BaseCard {
             1 //The card's base cost. -1 is X cost, -2 is no cost for unplayable cards like curses, or Reflex.
     );
 
-    public BloodFavour() {
+    public DevourHope() {
         super(ID, info);
 
-        setBlock(16, 4);
         tags.add(CustomTags.HEX);
+        setMagic(16, 4);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new LoseHPAction(p, p, 6));
-        addToBot(new GainBlockAction(p, p, this.block));
+        p.decreaseMaxHealth(2);
+        addToBot(new AddTemporaryHPAction(p, p, magicNumber));
     }
 }

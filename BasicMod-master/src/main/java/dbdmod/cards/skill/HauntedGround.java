@@ -1,12 +1,9 @@
 package dbdmod.cards.skill;
 
-import com.evacipated.cardcrawl.mod.stslib.actions.common.AutoplayCardAction;
-import com.evacipated.cardcrawl.mod.stslib.actions.common.FetchAction;
-import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.AutoplayField;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.utility.NewQueueCardAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.CardGroup;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -15,7 +12,6 @@ import dbdmod.cards.BaseCard;
 import dbdmod.character.MyCharacter;
 import dbdmod.powers.DangerPower;
 import dbdmod.util.CardStats;
-import jdk.nashorn.internal.runtime.Debug;
 
 public class HauntedGround extends BaseCard {
     public static final String ID = makeID(HauntedGround.class.getSimpleName());
@@ -52,6 +48,7 @@ public class HauntedGround extends BaseCard {
         if (hand.contains(this)) {
             setCostForTurn(costForTurn - 1);
             if (costForTurn == 0) {
+                addToTop(new SFXAction(makeID("Exposed")));
                 addToTop(new NewQueueCardAction(this, null, true, true));
             }
         }

@@ -32,11 +32,11 @@ public class SurgePower extends BasePower implements DiscardHookPatch.OnDiscardT
 
     @Override
     public void onManualDiscardThing() {
-        addToTop(new DamageAllEnemiesAction(null, DamageInfo.createDamageMatrix(amount, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.NONE));
+        addToBot(new DamageAllEnemiesAction(null, DamageInfo.createDamageMatrix(amount, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.NONE));
         for (AbstractMonster m3 : AbstractDungeon.getMonsters().monsters) {
             if (!m3.isDeadOrEscaped() && !m3.halfDead) {
-                addToTop(new VFXAction(new LightningEffect(m3.drawX, m3.drawY), 0));
-                addToTop(new SFXAction("ORB_LIGHTNING_EVOKE"));
+                addToBot(new VFXAction(new LightningEffect(m3.drawX, m3.drawY), 0));
+                addToBot(new SFXAction("ORB_LIGHTNING_EVOKE"));
             }
         }
     }

@@ -46,7 +46,7 @@
   },
   "${modID}:BloodFavour": {
     "NAME": "厄咒:鮮血恩惠",
-    "DESCRIPTION": "失去8點生命 NL 獲得 !B! 點 格擋 "
+    "DESCRIPTION": "失去6點生命 NL 獲得 !B! 點 格擋 "
   },
   "${modID}:BloodEcho": {
     "NAME": "鮮血迴響",
@@ -71,7 +71,7 @@
   },
   "${modID}:HauntedGround": {
     "NAME": "厄咒:鬧鬼之地",
-    "DESCRIPTION": " 無法打出 、 ${modID}:根植 NL 本回合每受傷一次耗能-1，耗能為0時給予全部敵人 !M! 層 ${modID}:危險 "
+    "DESCRIPTION": " 無法打出 、 ${modID}:根植 NL 本回合每受傷一次耗能-1，此時耗能若為0則自動打出 NL 給予全部敵人 !M! 層 ${modID}:危險 "
   },
   "${modID}:BlightedCorruption": {
     "NAME": "枯萎腐敗",
@@ -101,5 +101,13 @@
   "${modID}:Surge": {
     "NAME": "電能震盪",
     "DESCRIPTION": "你每棄一張牌，就對所有敵人造成 !M! 點傷害"
+  },
+  "${modID}:Ruin": {
+    "NAME": "厄咒:毀滅",
+    "DESCRIPTION": " 無法打出 NL 抽到此牌時失去3點生命 NL 若此牌從手牌中被丟棄，抽 !M! 張牌"
+  },
+  "${modID}:DevourHope": {
+    "NAME": "厄咒:吞噬希望",
+    "DESCRIPTION": "失去1點最大生命 NL 獲得 !M! 點臨時生命"
   }
 }
