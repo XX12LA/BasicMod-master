@@ -108,6 +108,19 @@
   },
   "${modID}:DevourHope": {
     "NAME": "厄咒:吞噬希望",
-    "DESCRIPTION": "失去1點最大生命 NL 獲得 !M! 點臨時生命"
+    "DESCRIPTION": "失去2點最大生命 NL 獲得 !M! 點 ${modID}:臨時生命 NL 消耗 "
+  },
+  "${modID}:CorruptIntervention": {
+    "NAME": "腐爛干預",
+    "DESCRIPTION": "如果這是你的第一回合，則擊暈所有敵人一回合 NL 消耗 ",
+    "UPGRADE_DESCRIPTION":" 固有 NL 如果這是你的第一回合，則擊暈所有敵人一回合 NL 消耗 "
+  },
+  "${modID}:Pentimento": {
+    "NAME": "厄咒:修飾痕",
+    "DESCRIPTION": "每捨棄四張牌 NL 就隨機將一張手牌的耗能- !M! "
+  },
+  "${modID}:Redeemer": {
+    "NAME": "救贖者",
+    "DESCRIPTION": "造成 !D! 點傷害 NL 從棄牌堆隨機抽1張牌"
   }
 }

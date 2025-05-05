@@ -23,6 +23,7 @@ public class DevourHope extends BaseCard {
 
         tags.add(CustomTags.HEX);
         setMagic(16, 4);
+        setExhaust(true);
     }
 
     @Override
