@@ -122,5 +122,13 @@
   "${modID}:Redeemer": {
     "NAME": "救贖者",
     "DESCRIPTION": "造成 !D! 點傷害 NL 從棄牌堆隨機抽1張牌"
+  },
+  "${modID}:TVirus": {
+    "NAME": "T病毒",
+    "DESCRIPTION": "造成6點傷害 NL 該敵人死亡時，你獲得 !M! 點 力量 "
+  },
+  "${modID}:VirulentBound": {
+    "NAME": "毒蛇躍擊",
+    "DESCRIPTION": "造成 !D! 點傷害2次 NL 對其他隨機敵人造成 !D! 點傷害 NL 獲得1點 敏捷 "
   }
 }

@@ -3,6 +3,7 @@ package dbdmod.cards.power;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import dbdmod.CustomTags;
 import dbdmod.cards.BaseCard;
 import dbdmod.character.MyCharacter;
 import dbdmod.powers.PentimentoPower;
@@ -22,6 +23,7 @@ public class Pentimento extends BaseCard {
         super(ID, info);
 
         setMagic(1, 1);
+        tags.add(CustomTags.HEX);
     }
 
     @Override
