@@ -27,6 +27,7 @@ public class VirulentBound extends BaseCard {
         super(ID, info);
 
         setDamage(7, 2);
+        setMagic(1, 2);
     }
 
     @Override
@@ -38,6 +39,6 @@ public class VirulentBound extends BaseCard {
         if (m2 != null) {
             addToBot(new DamageAction(m2, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         }
-        addToBot(new ApplyPowerAction(p, p, new DexterityPower(p, 1)));
+        addToBot(new ApplyPowerAction(p, p, new DexterityPower(p, magicNumber)));
     }
 }

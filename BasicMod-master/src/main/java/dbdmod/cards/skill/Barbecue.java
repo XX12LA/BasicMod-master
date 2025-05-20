@@ -20,7 +20,7 @@ public class Barbecue extends BaseCard {
     public Barbecue() {
         super(ID, info);
 
-        setMagic(4, 1);
+        setMagic(2, 2);
     }
 
     @Override

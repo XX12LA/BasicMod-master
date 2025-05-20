@@ -130,5 +130,21 @@
   "${modID}:VirulentBound": {
     "NAME": "毒蛇躍擊",
     "DESCRIPTION": "造成 !D! 點傷害2次 NL 對其他隨機敵人造成 !D! 點傷害 NL 獲得1點 敏捷 "
+  },
+  "${modID}:GasBomb": {
+    "NAME": "精煉毒酒",
+    "DESCRIPTION": "給予所有敵人 !M! 層 中毒 、 !${modID}:M2! 層 虛弱 及 易傷"
+  },
+  "${modID}:Retribution": {
+    "NAME": "厄咒:懲罰",
+    "DESCRIPTION": "消耗手牌中X張厄咒牌 NL 氣場(2X):選X張牌",
+    "UPGRADE_DESCRIPTION": "消耗手牌中X張厄咒牌 NL 氣場(2X):選X+1張牌",
+    "EXTENDED_DESCRIPTION":[
+      "消耗"
+    ]
+  },
+  "${modID}:MakeChoice": {
+    "NAME": "做出你的選擇",
+    "DESCRIPTION": "捨棄4張牌 NL 選擇:給予所有敵人1層危險，獲得12點 ${modID}:臨時生命 ，抽4張牌"
   }
 }

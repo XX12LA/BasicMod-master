@@ -30,12 +30,19 @@ public class AuraAction extends AbstractGameAction {
                 if (i<0) break;
                 grp.add(p.drawPile.group.get(i));
             }
-            addToTop(new BetterSelectCardsAction(grp, dC, ui1+dC+ui2, cards -> {
-                for (AbstractCard c : cards) {
+            if (dC >= vC) {
+                for (AbstractCard c : grp) {
                     p.drawPile.removeCard(c);
                     p.hand.addToHand(c);
                 }
-            }));
+            } else {
+                addToTop(new BetterSelectCardsAction(grp, dC, ui1+dC+ui2, cards -> {
+                    for (AbstractCard c : cards) {
+                        p.drawPile.removeCard(c);
+                        p.hand.addToHand(c);
+                    }
+                }));
+            }
         }
         isDone = true;
     }
