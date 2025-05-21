@@ -145,6 +145,18 @@
   },
   "${modID}:MakeChoice": {
     "NAME": "做出你的選擇",
-    "DESCRIPTION": "捨棄4張牌 NL 選擇:給予所有敵人1層危險，獲得12點 ${modID}:臨時生命 ，抽4張牌"
+    "DESCRIPTION": "隨機捨棄4張牌 NL 選擇:給予所有敵人1層 ${modID}:危險 ，獲得12點 ${modID}:臨時生命 ，抽4張牌"
+  },
+  "${modID}:GiveDanger": {
+    "NAME": "選擇幫助",
+    "DESCRIPTION": "給予所有敵人1層 ${modID}:危險 "
+  },
+  "${modID}:GiveDraw": {
+    "NAME": "等價交換",
+    "DESCRIPTION": "抽4張牌"
+  },
+  "${modID}:GiveTempHp": {
+    "NAME": "選擇不救",
+    "DESCRIPTION": "獲得12點 ${modID}:臨時生命 "
   }
 }
