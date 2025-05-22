@@ -48,7 +48,6 @@ public class HauntedGround extends BaseCard {
         if (hand.contains(this)) {
             setCostForTurn(costForTurn - 1);
             if (costForTurn == 0) {
-                addToTop(new SFXAction(makeID("Exposed")));
                 addToTop(new NewQueueCardAction(this, null, true, true));
             }
         }

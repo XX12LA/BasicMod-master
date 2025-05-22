@@ -256,5 +256,10 @@ public class BasicMod implements
     @Override
     public void receiveAddAudio() {
         BaseMod.addAudio(makeID("Exposed"), "dbdmod/sfx/Exposed.ogg");
+        BaseMod.addAudio(makeID("OpenCloset"), "dbdmod/sfx/OpenCloset.mp3");
+        BaseMod.addAudio(makeID("LacerationAlmostFull"), "dbdmod/sfx/LacerationAlmostFull.mp3");
+        BaseMod.addAudio(makeID("LacerationFull"), "dbdmod/sfx/LacerationFull.mp3");
+        BaseMod.addAudio(makeID("LacerationCount"), "dbdmod/sfx/LacerationCount.mp3");
+        BaseMod.addAudio(makeID("Myers"), "dbdmod/sfx/Myers.mp3");
     }
 }

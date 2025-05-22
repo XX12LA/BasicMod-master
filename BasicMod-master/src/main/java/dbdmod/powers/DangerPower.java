@@ -1,6 +1,7 @@
 package dbdmod.powers;
 
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.powers.AbstractPower;
@@ -14,6 +15,12 @@ public class DangerPower extends BasePower {
 
     public DangerPower(AbstractCreature owner, int amount) {
         super(POWER_ID, TYPE, TURN_BASED, owner, amount);
+        addToTop(new SFXAction(makeID("Exposed")));
+    }
+
+    public void stackPower(int stackAmount) {
+        addToTop(new SFXAction(makeID("Exposed")));
+        this.amount += stackAmount;
     }
 
     public int onAttackedToChangeDamage(DamageInfo info, int damageAmount) {

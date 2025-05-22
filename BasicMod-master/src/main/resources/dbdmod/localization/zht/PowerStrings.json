@@ -82,5 +82,19 @@
       "死亡時，你獲得 #b",
       " 點 #y力量 "
     ]
+  },
+  "${modID}:BestForLastPower": {
+    "NAME": "把最好的留在最後",
+    "DESCRIPTIONS": [
+      "打出 #b",
+      " 張攻擊牌後，返還下次打出的攻擊牌費用"
+    ]
+  },
+  "${modID}:LacerationPower": {
+    "NAME": "裂傷",
+    "DESCRIPTIONS": [
+      "目前有 #b",
+      " 層 #y裂傷 NL #y裂傷 增加後，若層數為6的倍數，就造成等同於 #y裂傷 層數的傷害 NL 回合結束時，層數減半"
+    ]
   }
 }

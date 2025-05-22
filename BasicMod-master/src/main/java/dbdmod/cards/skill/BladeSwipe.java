@@ -1,5 +1,6 @@
 package dbdmod.cards.skill;
 
+import basemod.patches.com.megacrit.cardcrawl.dungeons.AbstractDungeon.NoPools;
 import basemod.patches.com.megacrit.cardcrawl.screens.compendium.CardLibraryScreen.NoCompendium;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
@@ -9,6 +10,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.BrutalityPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import dbdmod.cards.BaseCard;
@@ -17,6 +19,7 @@ import dbdmod.character.MyCharacter;
 import dbdmod.util.CardStats;
 
 @NoCompendium
+@NoPools
 public class BladeSwipe extends BaseCard {
     public static final String ID = makeID(BladeSwipe.class.getSimpleName());
     private static final CardStats info = new CardStats(
@@ -38,7 +41,11 @@ public class BladeSwipe extends BaseCard {
     @Override
     public void triggerOnGlowCheck() {
         this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
-        int brutalAmount = AbstractDungeon.player.getPower(BrutalityPower.POWER_ID).amount;
+        AbstractPower brutal = AbstractDungeon.player.getPower(BrutalityPower.POWER_ID);
+        int brutalAmount = 0;
+        if (brutal != null) {
+            brutalAmount = brutal.amount;
+        }
         if (brutalAmount >= 1) {
             this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
         }

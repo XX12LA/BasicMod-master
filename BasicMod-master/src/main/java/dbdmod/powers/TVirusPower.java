@@ -36,16 +36,6 @@ public class TVirusPower extends BasePower {
             this.amount = -999;
     }
 
-    public void reducePower(int reduceAmount) {
-        this.amount -= reduceAmount;
-        if (this.amount == 0)
-            addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, this));
-        if (this.amount >= 999)
-            this.amount = 999;
-        if (this.amount <= -999)
-            this.amount = -999;
-    }
-
     public void updateDescription() {
         this.description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
     }

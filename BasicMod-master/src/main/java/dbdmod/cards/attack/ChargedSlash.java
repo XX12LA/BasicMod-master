@@ -22,8 +22,8 @@ public class ChargedSlash extends BaseCard {
             1 //The card's base cost. -1 is X cost, -2 is no cost for unplayable cards like curses, or Reflex.
     );
 
-    private static final int DAMAGE = 14;
-    private static final int UPG_DAMAGE = 4;
+    private static final int DAMAGE = 10;
+    private static final int UPG_DAMAGE = 2 ;
 
     public ChargedSlash() {
         super(ID, info); //Pass the required information to the BaseCard constructor.

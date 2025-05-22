@@ -68,5 +68,33 @@
       "臨時生命"
     ],
     "DESCRIPTION": "回復X點生命，戰鬥結束後移除"
+  },
+  {
+    "PROPER_NAME": "唯一",
+    "NAMES": [
+      "唯一"
+    ],
+    "DESCRIPTION": "此能力無法疊加"
+  },
+  {
+    "PROPER_NAME": "裂傷",
+    "NAMES": [
+      "裂傷"
+    ],
+    "DESCRIPTION": "裂傷增加後，若層數為6的倍數，就造成等同於裂傷層數的傷害 NL 回合結束時，層數減半"
+  },
+  {
+    "PROPER_NAME": "備彈",
+    "NAMES": [
+      "備彈"
+    ],
+    "DESCRIPTION": "此牌使用後不會進入棄牌堆，會繼續保留在手中"
+  },
+  {
+    "PROPER_NAME": "多次消耗",
+    "NAMES": [
+      "多次消耗"
+    ],
+    "DESCRIPTION": "打出一定次數後消耗"
   }
 ]
