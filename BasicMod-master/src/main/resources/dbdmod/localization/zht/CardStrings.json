@@ -177,10 +177,18 @@
   },
   "${modID}:Hatchet": {
     "NAME": "飛斧",
-    "DESCRIPTION": "造成 !${modID}:spDamage! 點傷害，傷害受 敏捷 *2影響且不受 力量 影響 NL ${modID}:多次消耗 ( !stslib:ex! )、 ${modID}:備彈 "
+    "DESCRIPTION": "造成 !${modID}:spDamage! 點傷害，傷害受 敏捷 * !M! 影響且不受 力量 影響 NL ${modID}:多次消耗 ( !stslib:ex! )、 ${modID}:備彈 "
   },
   "${modID}:Blade": {
     "NAME": "飛刀",
     "DESCRIPTION": "造成 !D! 點傷害，給予1層 ${modID}:裂傷 NL ${modID}:多次消耗 ( !stslib:ex! )、 ${modID}:備彈 "
+  },
+  "${modID}:PlayWithFood": {
+    "NAME": "不要玩食物",
+    "DESCRIPTION": "每打出1張攻擊牌，減少 !M! 點 敏捷 NL 每打出1張非攻擊牌，獲得 !M! 點 敏捷 "
+  },
+  "${modID}:VilePurge": {
+    "NAME": "骯髒傾瀉",
+    "DESCRIPTION": "給予 !M! 層 中毒 NL ${modID}:唯一 :使該敵人於你的回合結束時，給予所有其他敵人獲得等同於其 中毒 層數的 中毒 "
   }
 }

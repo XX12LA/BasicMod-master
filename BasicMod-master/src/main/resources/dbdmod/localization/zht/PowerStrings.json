@@ -86,15 +86,29 @@
   "${modID}:BestForLastPower": {
     "NAME": "把最好的留在最後",
     "DESCRIPTIONS": [
-      "打出 #b",
-      " 張攻擊牌後，返還下次打出的攻擊牌費用"
+      "已打出 #b",
+      "  張攻擊牌 NL 打出8張攻擊牌後，返還下次打出的攻擊牌費用"
     ]
   },
   "${modID}:LacerationPower": {
     "NAME": "裂傷",
     "DESCRIPTIONS": [
       "目前有 #b",
-      " 層 #y裂傷 NL #y裂傷 增加後，若層數為6的倍數，就造成等同於 #y裂傷 層數的傷害 NL 回合結束時，層數減半"
+      " 層 #y裂傷 NL #y裂傷 增加後，若層數為6的倍數，就失去等同於 #y裂傷 層數的生命 NL 回合結束時，層數減半"
+    ]
+  },
+  "${modID}:PlayWithFoodPower": {
+    "NAME": "不要玩食物",
+    "DESCRIPTIONS": [
+      "每打出1張攻擊牌，減少 #b",
+      " 點 #y敏捷 NL 每打出1張非攻擊牌，獲得 #b",
+      " 點 #y敏捷 "
+    ]
+  },
+  "${modID}:VilePurgePower": {
+    "NAME": "腐爛傾瀉",
+    "DESCRIPTIONS": [
+      "你的回合結束時，給予所有其他敵人獲得等同於其 中毒 層數的 中毒 "
     ]
   }
 }

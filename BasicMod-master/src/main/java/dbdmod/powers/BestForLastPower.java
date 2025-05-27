@@ -32,6 +32,6 @@ public class BestForLastPower extends BasePower {
     public void stackPower(int stackAmount) {}
 
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0] + "8" + DESCRIPTIONS[1];
+        this.description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
     }
 }

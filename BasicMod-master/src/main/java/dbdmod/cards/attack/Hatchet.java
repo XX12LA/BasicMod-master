@@ -31,19 +31,15 @@ public class Hatchet extends BaseCard {
     public Hatchet() {
         super(ID, info);
 
+        setMagic(2 ,1);
         PersistFields.setBaseValue(this, 99);
-        if (this.upgraded) {
-            ExhaustiveVariable.setBaseValue(this, 3);
-        } else {
-            ExhaustiveVariable.setBaseValue(this, 2);
-        }
+        ExhaustiveVariable.setBaseValue(this, 3);
         setCustomVar("spDamage", 6);
         setVarCalculation("spDamage", (card, m, base) -> {
             AbstractPower dex = AbstractDungeon.player.getPower(DexterityPower.POWER_ID);
             if (dex != null) {
-                base += dex.amount*2;
+                base += dex.amount*magicNumber;
             }
-
             return base;
         });
     }

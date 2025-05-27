@@ -30,7 +30,7 @@ public class Blade extends BaseCard {
     public Blade() {
         super(ID, info);
 
-        setDamage(0);
+        setDamage(1);
         PersistFields.setBaseValue(this, 99);
         if (this.upgraded) {
             ExhaustiveVariable.setBaseValue(this, 8);
