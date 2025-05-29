@@ -5,7 +5,7 @@ import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import dbdmod.BetterSelectCardsAction;
+import dbdmod.action.BetterSelectCardsAction;
 import dbdmod.cards.BaseCard;
 import dbdmod.cards.attack.Blade;
 import dbdmod.cards.attack.Hatchet;

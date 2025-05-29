@@ -1,4 +1,4 @@
-package dbdmod;
+package dbdmod.action;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;

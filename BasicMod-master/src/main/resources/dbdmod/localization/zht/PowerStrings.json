@@ -110,5 +110,12 @@
     "DESCRIPTIONS": [
       "你的回合結束時，給予所有其他敵人獲得等同於其 中毒 層數的 中毒 "
     ]
+  },
+  "${modID}:MachineLearningPower": {
+    "NAME": "機器學習",
+    "DESCRIPTIONS": [
+      "這名敵人死亡時，你獲得1層 #y無實體 和 #b",
+      " 層 #y敏捷 "
+    ]
   }
 }

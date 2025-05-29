@@ -137,8 +137,8 @@
   },
   "${modID}:Retribution": {
     "NAME": "厄咒:懲罰",
-    "DESCRIPTION": "消耗手牌中X張厄咒牌 NL 氣場(2X):選X張牌",
-    "UPGRADE_DESCRIPTION": "消耗手牌中X張厄咒牌 NL 氣場(2X):選X+1張牌",
+    "DESCRIPTION": "消耗手牌中X張厄咒牌 NL ${modID}:氣場 (2X):選X張牌",
+    "UPGRADE_DESCRIPTION": "消耗手牌中X張厄咒牌 NL ${modID}:氣場 (2X):選X+1張牌",
     "EXTENDED_DESCRIPTION":[
       "消耗"
     ]
@@ -190,5 +190,21 @@
   "${modID}:VilePurge": {
     "NAME": "骯髒傾瀉",
     "DESCRIPTION": "給予 !M! 層 中毒 NL ${modID}:唯一 :使該敵人於你的回合結束時，給予所有其他敵人獲得等同於其 中毒 層數的 中毒 "
+  },
+  "${modID}:MachineLearning": {
+    "NAME": "機器學習",
+    "DESCRIPTION": "這名敵人死亡時，你獲得1層 無實體 和 !M! 層 敏捷 "
+  },
+  "${modID}:ShatteredHope": {
+    "NAME": "希望破滅",
+    "DESCRIPTION": "你獲得等同於一名敵人 力量 層數的 力量 NL 移除該敵人的所有 力量 "
+  },
+  "${modID}:AwakenedAwareness": {
+    "NAME": "意識覺醒",
+    "DESCRIPTION": "獲得 !B! 點格擋 NL ${modID}:氣場 (4):選1張牌"
+  },
+  "${modID}:DeadSwitch": {
+    "NAME": "死亡開關",
+    "DESCRIPTION": "造成 !D! 點傷害 NL 若 斬殺 ，則擊暈所有敵人 NL 消耗 "
   }
 }
